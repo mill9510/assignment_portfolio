@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="b.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <title>Del b</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"><img src="" alt="" />HOME</a>
+        <ul>
+          <li><a href="a.html">A</a></li>
+          <li><a href="c.html">C</a></li>
+          <li><a href="d.html">D</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article class="description">
+        <h1>Delopgave B</h1>
+        <p>Til løsningen af denne opgave har på classen grid defineret et grid med 1 kolonne, hvor jeg via classen stats manuelt har justeret rækkefølgen af elementerne, så det er tilsvarende forudbestemt layout. For at tilpasse større skærmstørrelser har jeg via min media query defineret et nyt grid, som når skærmens vidde er over 900px, opstiller et andet grid, hvor jeg anvender minmax(0, 300px) 1fr 1fr 1fr", som fortæller at den første kolonne må være minimum 0 px og maksimum 300px.</p>
+      </article>
+      <article class="grid">
+        <div class="profile_container">
+          <div class="profile">
+            <div class="profile_picture">
+              <img src="imgs/woman.webp" alt="a profile photo of a woman" />
+            </div>
+
+            <h3>Report for</h3>
+            <h2>Jane Johnson</h2>
+          </div>
+
+          <div class="checkbox_container">
+            <div>
+              <input type="checkbox" id="daily" name="daily" />
+              <label for="daily">Daily</label>
+            </div>
+            <div>
+              <input type="checkbox" id="weekly" name="weekly" checked />
+              <label for="weekly">Weekly</label>
+            </div>
+            <div>
+              <input type="checkbox" id="monthly" name="monthly" />
+              <label for="monthly">Monthly</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="header">
+            <h3>Work</h3>
+            <p>...</p>
+          </div>
+          <div>
+            <h2>24hrs</h2>
+            <h4>Last week: 26hrs</h4>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="header">
+            <h3>Play</h3>
+            <p>...</p>
+          </div>
+          <div>
+            <h2>10hrs</h2>
+            <h4>Last week: 8hrs</h4>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="header">
+            <h3>Study</h3>
+            <p>...</p>
+          </div>
+          <div>
+            <h2>12.5hrs</h2>
+            <h4>Last week: 14hrs</h4>
+          </div>
+        </div>
+
+        <div class="stats stat_4">
+          <div class="header">
+            <h3>Exercise</h3>
+            <p>...</p>
+          </div>
+          <div>
+            <h2>5hrs</h2>
+            <h4>Last week: 4.5hrs</h4>
+          </div>
+        </div>
+
+        <div class="stats stat_5">
+          <div class="header">
+            <h3>Social</h3>
+            <p>...</p>
+          </div>
+          <div>
+            <h2>6.5hrs</h2>
+            <h4>Last week: 4hrs</h4>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="header">
+            <h3>Self care</h3>
+            <p>...</p>
+          </div>
+          <div>
+            <h2>3hrs</h2>
+            <h4>Last week: 2hrs</h4>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

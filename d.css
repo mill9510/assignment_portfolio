@@ -1,0 +1,122 @@
+.profile_picture {
+  width: 90px;
+  height: 90px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  clip-path: circle();
+
+  & img {
+    justify-self: center;
+  }
+}
+
+.bigger {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+  margin-bottom: 1rem;
+}
+
+/* components */
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.card {
+  font-size: 1.5rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.card:nth-child(1) {
+  grid-area: one;
+  background-color: rgb(222, 222, 222);
+}
+.card:nth-child(2) {
+  grid-area: two;
+  background-color: rgb(222, 222, 222);
+}
+.card:nth-child(3) {
+  grid-area: three;
+  background-color: rgb(222, 222, 222);
+}
+.card:nth-child(4) {
+  grid-area: four;
+  background-color: rgb(222, 222, 222);
+}
+.card:nth-child(5) {
+  grid-area: five;
+  background-color: rgb(222, 222, 222);
+}
+
+@media screen and (min-width: 530) {
+  .card-grid {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 610px) {
+  .card-grid {
+    grid-template-areas:
+      "one one"
+      "two five"
+      "three five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 865px) {
+  .card-grid {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
+
+.card img {
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.card .name {
+  font-size: 1rem;
+
+  line-height: 1;
+}
+
+.card .position {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.card > p:first-of-type {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.card > p:last-of-type {
+  opacity: 0.7;
+  font-size: 1rem;
+}

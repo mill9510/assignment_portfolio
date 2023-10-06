@@ -1,0 +1,142 @@
+@media (width < 650px) {
+  .article {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: var(--accent_col);
+    margin-left: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    color: rgb(138, 138, 138);
+    margin-left: 0.5rem;
+  }
+
+  button {
+    margin-left: 0.5rem;
+  }
+
+  .c_image_container {
+    border-radius: 10px;
+
+    background-color: none;
+
+    & img {
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+
+  .img_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .txt_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width > 651px) {
+  .article {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  div:has(h1),
+  .c_image_container {
+    grid-row: 1 / 2;
+  }
+
+  div:has(h1) {
+    grid-column: 6 / -1;
+    place-self: center start;
+
+    & h1 {
+      font-size: 4rem;
+      place-self: center start;
+      color: var(--accent_col);
+    }
+
+    & p {
+      margin-bottom: 5rem;
+      color: var(--secondary_col_2);
+    }
+  }
+
+  .c_image_container {
+    grid-column: 1 / 10;
+    grid-row: 1;
+    border-radius: 10px;
+
+    background-color: none;
+
+    & img {
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+
+  .img_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .txt_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width > 850px) {
+  .article {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  div:has(h1),
+  .c_image_container {
+    grid-row: 1 / 2;
+  }
+
+  div:has(h1) {
+    grid-column: 2 / -1;
+    place-self: center start;
+
+    & h1 {
+      font-size: 5rem;
+      place-self: center start;
+      color: var(--accent_col);
+    }
+
+    & p {
+      margin-bottom: 5rem;
+      color: var(--secondary_col_2);
+    }
+  }
+
+  .c_image_container {
+    grid-column: 1 / 10;
+    grid-row: 1;
+    border-radius: 10px;
+
+    background-color: var(--secondary_col_1);
+
+    & img {
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+
+  .img_grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .txt_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

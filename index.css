@@ -1,0 +1,29 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+img {
+  align-self: center;
+  border-radius: 10px;
+  justify-self: center;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
+
+@media (width < 550px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

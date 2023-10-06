@@ -1,0 +1,122 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (width > 900px) {
+    grid-template-columns: minmax(0, 300px) 1fr 1fr 1fr;
+  }
+}
+
+.header > p {
+  justify-self: end;
+  font-weight: 500;
+}
+
+.profile_container {
+  background-color: var(--primary-col_2);
+  border-radius: 10px;
+  grid-row: span 2;
+  background-color: var(--secondary_col_1);
+  display: grid;
+  grid-template-columns: 1fr;
+
+  & .profile {
+    padding: 10px;
+  }
+
+  & .profile_picture {
+    width: 90px;
+    height: 90px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    clip-path: circle();
+    margin-bottom: 1rem;
+
+    & > img {
+      justify-self: center;
+    }
+  }
+
+  & h3 {
+    margin-bottom: 0;
+    opacity: 0.5;
+  }
+
+  & h2 {
+    margin-bottom: 2rem;
+  }
+
+  & .checkbox_container {
+    background-color: var(--secondary_col_2);
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  position: relative;
+  padding-left: 30px; /* Tilføjer plads til custom checkbox */
+  cursor: pointer;
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px; /* Diameteren på den runde checkbox */
+  height: 12px; /*Diameteren på den runde checkbox */
+  /* border: 1px solid #000; Rammen omkring checkboxen */
+  background-color: #fff; /*Baggrundsfarve for checkboxen */
+  border-radius: 50%; /*Gør checkboxen rund */
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: var(--accent_col); /* Ændrer farven, når den er checked */
+}
+/************** stat cards ***********/
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--secondary_col_1);
+  border-radius: 10px;
+
+  & .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--secondary_col_2);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+  }
+
+  & h2,
+  h3 {
+    padding: 10px;
+  }
+
+  & h4 {
+    padding-left: 5px;
+  }
+}
+
+h3,
+h4 {
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .stat_4 {
+    grid-row: 4;
+  }
+
+  .stat_5 {
+    grid-row: 6;
+  }
+}
